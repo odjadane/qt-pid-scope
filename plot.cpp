@@ -71,7 +71,7 @@ void WidgetPlot::setupSignals() {
             this, SLOT(onSelectionChanged(bool)));
 }
 
-void WidgetPlot::updateAxes(int x, int ymin, int ymax){
+void WidgetPlot::updateAxes(int x, double ymin, double ymax){
     settingsPoints = x;
     settingsYMin = ymin;
     settingsYMax = ymax;

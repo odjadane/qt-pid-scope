@@ -79,16 +79,18 @@ void WidgetSideBar::setupInterface(){
     spinX->setSingleStep(100);
 
     labelYMin = new QLabel("ymin");
-    spinYMin = new QSpinBox;
+    spinYMin = new QDoubleSpinBox;
     spinYMin->setRange(-1000, 1000);
     spinYMin->setValue(-1);
-    spinYMin->setSingleStep(1);
+    spinYMin->setSingleStep(0.1);
+    spinYMin->setDecimals(1);
 
     labelYMax = new QLabel("ymax");
-    spinYMax = new QSpinBox;
+    spinYMax = new QDoubleSpinBox;
     spinYMax->setRange(-1000, 1000);
     spinYMax->setValue(6);
-    spinYMax->setSingleStep(1);
+    spinYMax->setSingleStep(0.1);
+    spinYMax->setDecimals(1);
 
     buttonReset = new QPushButton("Reset");
 
@@ -186,9 +188,9 @@ void WidgetSideBar::setupSignals() {
             this, SLOT(onButtonResetClicked()));
     connect(spinX, SIGNAL(valueChanged(int)),
             this, SLOT(onSpinValueChanged()));
-    connect(spinYMin, SIGNAL(valueChanged(int)),
+    connect(spinYMin, SIGNAL(valueChanged(double)),
             this, SLOT(onSpinValueChanged()));
-    connect(spinYMax, SIGNAL(valueChanged(int)),
+    connect(spinYMax, SIGNAL(valueChanged(double)),
             this, SLOT(onSpinValueChanged()));
 }
 

@@ -25,11 +25,11 @@ private:
 
     int indexLastPoint;
     int settingsPoints;
-    int settingsYMin;
-    int settingsYMax;
+    double settingsYMin;
+    double settingsYMax;
 
 private slots:
-    void updateAxes(int, int, int);
+    void updateAxes(int, double, double);
     void resetPlot();
     void updatePlot(QString);
     void onSelectionChanged(bool);

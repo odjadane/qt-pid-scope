@@ -28,8 +28,8 @@ void MainWindow::setupSignals() {
             widgetPlot, SLOT(updatePlot(QString)));
     connect(widgetSideBar, SIGNAL(sendButtonResetClicked()),
             widgetPlot, SLOT(resetPlot()));
-    connect(widgetSideBar, SIGNAL(sendSpinValueChanged(int, int, int)),
-            widgetPlot, SLOT(updateAxes(int, int, int)));
+    connect(widgetSideBar, SIGNAL(sendSpinValueChanged(int, double, double)),
+            widgetPlot, SLOT(updateAxes(int, double, double)));
 
     connect(widgetSideBar, SIGNAL(sendButtonConnectClicked(QString, int, int, int, int)),
             serial, SLOT(onConnect(QString, int, int, int, int)));

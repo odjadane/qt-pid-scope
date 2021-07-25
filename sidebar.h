@@ -71,8 +71,8 @@ private:
     QLabel *labelYMin;
     QLabel *labelYMax;
     QSpinBox *spinX;
-    QSpinBox *spinYMin;
-    QSpinBox *spinYMax;
+    QDoubleSpinBox *spinYMin;
+    QDoubleSpinBox *spinYMax;
     QPushButton *buttonReset;
     QGridLayout *gridPlot;
     QGroupBox *groupPlot;
@@ -83,7 +83,7 @@ signals:
     void sendButtonConnectClicked(QString, int, int, int, int);
     void sendButtonDisconnectClicked();
     void sendButtonResetClicked();
-    void sendSpinValueChanged(int, int, int);
+    void sendSpinValueChanged(int, double, double);
     void sendOpenLoop(double);
     void sendClosedLoop(double, double, double, double);
 
