@@ -26,6 +26,8 @@ This project has been successfully built using :
 - CMake 3.19.5 (make file included)
 - QCustomPlot 2.1.0 (source files are not included, must be downloaded from this [link](https://www.qcustomplot.com/index.php/download)).
 
+Pre-built binaries for Windows can be downloaded from the release section on the sidebar. 
+
 ## Screenshot
 
 ![](screenshot.png)
